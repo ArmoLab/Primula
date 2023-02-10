@@ -1,0 +1,131 @@
+---
+// Component Imports
+import Header from "../components/header.vue";
+import Introduction from "../components/introduction.vue";
+import "../assets/base.css";
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<style>
+			html,
+			body {
+				font-family: system-ui;
+				margin: 0;
+			}
+
+			body {
+				background-color: #1f1f1f;
+				background-image: linear-gradient(15deg, #13547a, #13547a, #80d0c7);
+				background-size: 200% 200%;
+				animation: Gradients 5s ease infinite;
+				background-attachment: fixed;
+			}
+
+			main {
+				margin: 0 auto;
+				color: #ffffff;
+				padding-top: 55px;
+			}
+			article {
+				width: 90%;
+				width: min(1000px,90%);
+				margin: 0 auto;
+			}
+
+			@keyframes Gradients {
+				0% {
+					background-position: 0% 50%;
+				}
+				50% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0% 50%;
+				}
+			}
+			@media (max-width: 600px) {
+				main {
+					padding-top: 80px;
+				}
+			}
+		</style>
+		<script>
+			addEventListener("DOMContentLoaded", function () {
+				document.body.classList.add("loaded");
+			});
+		</script>
+	</head>
+	<body>
+		<Header />
+		<main>
+
+			<Introduction />
+
+			<article>
+				<h1>Lorem</h1>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+					et justo non nisl pretium faucibus. Donec eget dictum augue. Nam
+					pharetra at lectus et facilisis. Fusce id massa nec urna
+					dignissim lacinia ac at ante. Nam metus arcu, pulvinar eu
+					commodo sed, lacinia at mauris. Pellentesque habitant morbi
+					tristique senectus et netus et malesuada fames ac turpis
+					egestas. Duis in malesuada mi. Fusce efficitur sapien a tellus
+					venenatis, ut condimentum libero vestibulum. Donec fermentum
+					hendrerit quam, vitae posuere mi blandit gravida. Duis id nulla
+					a purus convallis bibendum quis et arcu. Praesent commodo
+					gravida pretium. Donec ac lacus nunc. Etiam eleifend elementum
+					auctor. Morbi vitae elementum elit, ut sodales ipsum. Etiam eget
+					lobortis dolor.
+				</p>
+				<p>
+					Nam enim est, scelerisque non velit nec, mollis aliquam nibh.
+					Vestibulum quis lectus mi. Donec ac gravida ligula, et
+					vestibulum lectus. Pellentesque non est vitae dolor luctus
+					fringilla. Fusce bibendum in tortor in dignissim. Proin in
+					aliquet nisl, a dignissim metus. Etiam malesuada tincidunt
+					porta. Mauris at lacinia augue.
+				</p>
+				<p>
+					Cras ex magna, placerat sit amet diam et, consectetur imperdiet
+					urna. Donec egestas ultricies luctus. Mauris ac malesuada diam.
+					Vivamus lorem erat, vehicula ut purus quis, mattis ornare
+					libero. Integer vel dapibus est. Vivamus vitae lacinia purus, ac
+					viverra massa. Nulla finibus accumsan volutpat.
+				</p>
+				<p>
+					Quisque porta elit lectus, a feugiat sapien interdum sed. Etiam
+					sit amet laoreet neque, in eleifend felis. Vestibulum ante ipsum
+					primis in faucibus orci luctus et ultrices posuere cubilia
+					curae; Nulla id ante condimentum, vulputate ante id, mollis
+					nulla. Sed accumsan quam tincidunt elit consequat, at consequat
+					massa malesuada. Aenean eu interdum orci. Morbi scelerisque eros
+					non dui dapibus, at malesuada libero iaculis. Aenean id nulla
+					sodales, fringilla urna nec, ultrices sem. Curabitur efficitur
+					eros at lorem cursus, in scelerisque risus ullamcorper. Aenean
+					facilisis enim vel sem interdum feugiat. Maecenas non sem
+					mattis, maximus orci eu, ullamcorper arcu. Nulla non auctor est.
+				</p>
+				<p>
+					Donec egestas tempor ligula sed tempus. Sed est ante, porta eget
+					consequat vitae, tincidunt sit amet lorem. Cras non varius elit,
+					at semper urna. Suspendisse risus ligula, viverra in facilisis
+					non, mollis sit amet nulla. Maecenas blandit erat id odio
+					interdum, feugiat ultrices est interdum. Maecenas luctus tempor
+					quam, quis aliquam dui porttitor id. Sed viverra lacus vel
+					imperdiet fringilla. Cras et rhoncus ante. Nam odio sem,
+					pellentesque varius justo nec, posuere posuere tellus. Sed et
+					egestas nibh, in fermentum turpis. In ac auctor metus.
+				</p>
+			</article>
+		</main>
+	</body>
+</html>

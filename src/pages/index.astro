@@ -3,6 +3,7 @@
 import Header from "../components/header.vue";
 import Introduction from "../components/introduction.vue";
 import "../assets/base.css";
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -13,49 +14,6 @@ import "../assets/base.css";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-
-			body {
-				background-color: #1f1f1f;
-				background-image: linear-gradient(15deg, #13547a, #13547a, #80d0c7);
-				background-size: 200% 200%;
-				animation: Gradients 5s ease infinite;
-				background-attachment: fixed;
-			}
-
-			main {
-				margin: 0 auto;
-				color: #ffffff;
-				padding-top: 55px;
-			}
-			article {
-				width: 90%;
-				width: min(1000px,90%);
-				margin: 0 auto;
-			}
-
-			@keyframes Gradients {
-				0% {
-					background-position: 0% 50%;
-				}
-				50% {
-					background-position: 100% 50%;
-				}
-				100% {
-					background-position: 0% 50%;
-				}
-			}
-			@media (max-width: 600px) {
-				main {
-					padding-top: 80px;
-				}
-			}
-		</style>
 		<script>
 			addEventListener("DOMContentLoaded", function () {
 				document.body.classList.add("loaded");
@@ -65,9 +23,8 @@ import "../assets/base.css";
 	<body>
 		<Header />
 		<main>
-
+			
 			<Introduction />
-
 			<article>
 				<h1>Lorem</h1>
 

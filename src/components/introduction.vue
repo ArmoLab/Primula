@@ -1,8 +1,14 @@
 <template>
     <div class="IntroductionContainer">
         <div class="Introduction">
-            <h2>Introduction</h2>
-            <button class="bg-transparent">Getting Started ></button>
+            <h2>Primula Introduction</h2>
+            <p>這是什麼? 這是一個什麼都沒寫的網站前端.</p>
+            <button class="bg-transparent">
+                <a>
+                    Getting Started &nbsp;
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </button>
         </div>
     </div>
 </template>
@@ -18,6 +24,7 @@
         background-color: #1f1f1f;
         background-position: center;
         background-size: cover;
+        background-attachment: fixed;
         background-image: url("/images/2022-02-20-15-40-05_1080_commpressed.png");
 
         /* item center */
@@ -31,24 +38,8 @@
     div.Introduction {
         text-align: center;
     }
-    button {
-        border-style: solid;
-        border-color: #f8f8ff;
-        border-width: 2px;
-        border-radius: 5px;
-
-        padding: 15px 10px;
-
-        color: #f8f8ff;
-        font-size: medium;
-        font-weight: bold;
-    }
-    button.bg-transparent {
-        background-color: rgba(0,0,0,0);
-    }
 </style>
 
 
 
-<!--   <script setup>
-</script> -->
+<!-- <script setup></script> -->

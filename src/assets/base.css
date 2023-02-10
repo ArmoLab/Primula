@@ -1,0 +1,108 @@
+@import "./font-awesome-all-6.2.0.min.css";
+html,
+body {
+    font-family: system-ui;
+    margin: 0;
+}
+
+body {
+    background-color: #1f1f1f;
+    background-image: linear-gradient(15deg, #13547a, #13547a, #80d0c7);
+    background-size: 200% 200%;
+    animation: Gradients 5s ease infinite;
+    background-attachment: fixed;
+}
+
+main {
+    margin: 0 auto;
+    color: #ffffff;
+    padding-top: 55px;
+}
+article {
+    width: 90%;
+    width: min(1000px,90%);
+    margin: 0 auto;
+}
+
+
+button {
+    border-style: solid;
+    border-color: #f8f8ff;
+    border-width: 2px;
+    border-radius: 5px;
+
+    padding: 15px 10px;
+
+    color: #f8f8ff;
+    font-size: medium;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+button.bg-transparent {
+    background-color: rgba(0,0,0,0);
+    transition: color ease 0.45s;
+    /* box-shadow: 1px 1px 26px 2px #A8A8A8; */
+    box-shadow: 1px 1px 26px 2px #232323;
+}
+button.bg-transparent a {
+    z-index: 1;
+    position: relative;
+}
+button.bg-transparent::before {
+    transition: width ease 0.45s;
+    content: "";
+    background-color: #f8f8ff;
+    height: 54px;
+    width: 0px;
+    display: block;
+    position: relative;
+    margin-bottom: -54px;
+    top: -15px;
+    left: -10px;
+}
+button.bg-transparent:hover::before {
+    width: 114%;
+}
+button.bg-transparent:hover {
+    color: #1f1f1f;
+}
+
+
+a:link, a:visited {
+    color: #f8f8f8;
+    text-decoration: none;
+    display: inline-block;
+}
+a:link::after, a:visited::after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #f8f8ff;
+    margin: 0 0 0 auto;
+
+    -webkit-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+a:link:hover::after, a:visited:hover::after {
+    width: 100%;
+    margin: 0 auto 0 0;
+}
+
+@keyframes Gradients {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@media (max-width: 600px) {
+    main {
+        padding-top: 80px;
+    }
+}

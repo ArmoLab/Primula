@@ -1,7 +1,17 @@
 {
-	"name": "yallage",
+	"name": "primula",
 	"type": "module",
 	"version": "0.0.1",
+	"author": "kobe-koto",
+	"description": "just a website",
+	"homepage": "https://primula.dev.koto.cc/",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kobe-koto/Primula.git"
+	},
+	"bugs": {
+		"url": "https://github.com/kobe-koto/Primula/issues"
+	},
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -10,8 +20,6 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^6.3.0",
-		"@fortawesome/vue-fontawesome": "^3.0.3",
 		"astro": "^2.0.9",
 		"vue": "^3.2.47"
 	},

@@ -1,12 +1,14 @@
 <template>
     <header>
-        <span class="title">Website (Preview)</span>
+        <span class="title">
+            <a href="/">Primula (Alpha)</a>
+        </span>
         <nav class="menu">
             <a 
                 v-for="item in navigation" 
                 :key="item.name" 
                 :href="item.href" 
-                :class="[item.current ? 'current' : '']" 
+                :class="[item.current ? 'current' : '']"
             >
             {{ item.name }}
         </a>
@@ -14,11 +16,10 @@
     </header>
 </template>
   
-<script setup>
+<script lang="ts" setup>
     const navigation = [
         { name: 'Home',       current: true,     href: 'javascript:void(0)'},
-        { name: 'Yggdrasil',  current: false,    href: 'https://skin.qianyiovo.com/auth/register'},
-        { name: 'Discord',    current: false,    href: 'https://discord.gg/Yd7sxzAeQv'},
+        { name: 'Telegram',   current: false,    href: 'https://t.me/+VUUOvlY0Hq00YzVl'},
         { name: 'Settings',   current: false,    href: 'javascript:alert("沒有寫捏")'},
     ]
 </script>
@@ -36,13 +37,15 @@
         background-color: rgba(31, 31, 31, 0.75);
         padding: 15px 0;
         color: #f8f8ff;
+
+        z-index: 128;
     }
 
     span.title {
         margin-left: 15px;
         letter-spacing: 2px;
         opacity: 0;
-        transition: opacity,letter-spacing ease 0.55s;
+        transition: opacity,letter-spacing ease 0.85s;
     }
     nav.menu {
         opacity: 0;
@@ -61,26 +64,6 @@
 
     nav.menu > a:not(:last-child) {
         margin-right: 10px;
-    }
-    nav.menu > a {
-        color: #f8f8f8;
-        text-decoration: none;
-        display: inline-block;
-    }
-    nav.menu > a::after {
-        content: "";
-        width: 0px;
-        height: 1px;
-        display: block;
-        background: #f8f8ff;
-        margin: 0 0 0 auto;
-
-        -webkit-transition: width 0.3s ease;
-        transition: width 0.3s ease;
-    }
-    nav.menu > a:hover::after {
-        width: 100%;
-        margin: 0 auto 0 0;
     }
 
     nav.menu > a.current {

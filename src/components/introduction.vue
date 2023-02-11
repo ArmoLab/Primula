@@ -34,9 +34,29 @@
 
         justify-content: center;
         align-items: center;
+        
+       	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
+
+	-webkit-justify-content: center;
+
+
+
+    -webkit-box-pack: center;
+
+	justify-content: center;
+        
+        padding-top: 55px;
     } 
     div.Introduction {
         text-align: center;
+    }
+    @media (max-width: 600px) {
+        div.IntroductionContainer {
+            padding-top: 80px;
+        }
     }
 </style>
 

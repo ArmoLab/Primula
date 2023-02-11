@@ -16,7 +16,6 @@ body {
 main {
     margin: 0 auto;
     color: #ffffff;
-    padding-top: 55px;
 }
 article {
     width: 90%;
@@ -38,6 +37,7 @@ button {
     font-weight: bold;
 
     cursor: pointer;
+    overflow: hidden;
 }
 button.bg-transparent {
     background-color: rgba(0,0,0,0);
@@ -53,16 +53,16 @@ button.bg-transparent::before {
     transition: width ease 0.45s;
     content: "";
     background-color: #f8f8ff;
-    height: 54px;
+    height: 55px;
     width: 0px;
     display: block;
     position: relative;
-    margin-bottom: -54px;
+    margin-bottom: -55px;
     top: -15px;
     left: -10px;
 }
 button.bg-transparent:hover::before {
-    width: 114%;
+    width: 128%;
 }
 button.bg-transparent:hover {
     color: #1f1f1f;
@@ -99,10 +99,5 @@ a:link:hover::after, a:visited:hover::after {
     }
     100% {
         background-position: 0% 50%;
-    }
-}
-@media (max-width: 600px) {
-    main {
-        padding-top: 80px;
     }
 }

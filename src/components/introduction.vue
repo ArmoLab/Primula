@@ -18,6 +18,7 @@
     div.IntroductionContainer {
         /* size */
         min-height: 400px;
+		padding-top: 55px;
         width: 100%;
 
         /* background */
@@ -32,23 +33,14 @@
         display: -webkit-flex;
         display: flex;
 
-        justify-content: center;
-        align-items: center;
-        
        	-webkit-align-items: center;
-	-webkit-box-align: center;
+		-webkit-box-align: center;
+		align-items: center;
 
-	align-items: center;
+		-webkit-justify-content: center;
+		-webkit-box-pack: center;
+		justify-content: center;
 
-	-webkit-justify-content: center;
-
-
-
-    -webkit-box-pack: center;
-
-	justify-content: center;
-        
-        padding-top: 55px;
     } 
     div.Introduction {
         text-align: center;

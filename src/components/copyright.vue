@@ -1,7 +1,14 @@
 <template>
 	<footer>
-		<span>Copyright 2023-Now kobe-koto</span>
+		<div>Copyright 2023-Now kobe-koto</div>
+		<br>
 		<span>Under AGPL-3.0</span>
+		<span>
+			Powered by
+			<a href="https://astro.build/">Astro</a>
+			&
+			<a href="https://vuejs.org/">Vue 3</a>
+		</span>
 		<span>
 			Open Source on
 			<a href="https://github.com/kobe-koto/Primula/">Github</a>

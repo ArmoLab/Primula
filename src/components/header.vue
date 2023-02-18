@@ -1,7 +1,7 @@
 <template>
     <header>
         <span class="title">
-            <a href="/">Primula (Alpha)</a>
+            <a href="/">Primula (Beta)</a>
         </span>
         <nav class="menu">
             <a 

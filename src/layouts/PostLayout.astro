@@ -1,0 +1,41 @@
+---
+const { content } = Astro.props;
+let Title = content.title,
+    Description = content.description,
+    Author = content.author;
+
+// Component Imports
+import Header from "../components/header.vue";
+import Copyright from "../components/copyright.vue";
+import Introduction from "../components/introduction.vue";
+import "../assets/base.css";
+---
+
+<html lang="zh">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Author} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{ Title } - Primula</title>
+		<script>
+			addEventListener("DOMContentLoaded", function () {
+				document.body.classList.add("loaded");
+			});
+		</script>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<Introduction
+			    Title={ Title }
+			    Description={ Description }
+			/>
+			<article>
+                <slot />
+                {Author ? <p style="text-align: right">by <a style="font-weight: bold">{Author}</a></p> : ""}
+			</article>
+			<Copyright />
+		</main>
+	</body>
+</html>

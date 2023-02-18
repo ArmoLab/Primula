@@ -1,14 +1,14 @@
 <template>
     <div class="IntroductionContainer">
         <div class="Introduction">
-            <h2>Primula Introduction</h2>
-            <p>這是什麼? 這是一個什麼都沒寫的網站前端.</p>
-            <button class="bg-transparent">
-                <a>
-                    Getting Started &nbsp;
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </button>
+            <h2>{{ Title }}</h2>
+            <p>{{ Description }}</p>
+			<a class="as-button bg-transparent" :href="Href" v-if="Href">
+				<span>
+					Getting Started &nbsp;
+					<i class="fa-solid fa-arrow-right"></i>
+				</span>
+			</a>
         </div>
     </div>
 </template>
@@ -52,6 +52,23 @@
     }
 </style>
 
-
-
-<!-- <script setup></script> -->
+<script setup>
+const { Title, Description, Href } =
+	defineProps({
+		Title: {
+			type: String,
+			required: true
+		},
+		Description: {
+			type: String,
+			required: true
+		},
+		Href: {
+			type: String,
+			required: false
+		}
+	});
+function Go (Href) {
+	location.assign(Href)
+}
+</script>

@@ -17,6 +17,8 @@ main {
     margin: 0 auto;
     color: #ffffff;
 }
+
+/*noinspection CssOverwrittenProperties*/
 article {
     width: 90%;
     width: min(1000px,90%);
@@ -24,7 +26,8 @@ article {
 }
 
 
-button {
+button, .as-button {
+    display: inline-block;
     border-style: solid;
     border-color: #f8f8ff;
     border-width: 2px;
@@ -39,44 +42,43 @@ button {
     cursor: pointer;
     overflow: hidden;
 }
-button.bg-transparent {
-    background-color: rgba(0,0,0,0);
+.as-button.bg-transparent, button.bg-transparent {
+    background: none;
     transition: color ease 0.45s;
     /* box-shadow: 1px 1px 26px 2px #A8A8A8; */
     box-shadow: 1px 1px 26px 2px #232323;
 }
-button.bg-transparent a {
-    z-index: 1;
+.as-button.bg-transparent span, button.bg-transparent span {
     position: relative;
 }
-button.bg-transparent::before {
-    transition: width ease 0.45s;
+.as-button.bg-transparent::before, button.bg-transparent::before {
     content: "";
+    transition: width ease 0.45s;
     background-color: #f8f8ff;
     height: 55px;
-    width: 0px;
+    width: 0;
     display: block;
     position: relative;
     margin-bottom: -55px;
     top: -15px;
     left: -10px;
 }
-button.bg-transparent:hover::before {
+.as-button.bg-transparent:hover::before, button.bg-transparent:hover::before {
     width: 128%;
 }
-button.bg-transparent:hover {
+.as-button.bg-transparent:hover, button.bg-transparent:hover {
     color: #1f1f1f;
 }
 
 
-a:link, a:visited {
+a:link:not(.as-button), a:visited:not(.as-button) {
     color: #f8f8f8;
     text-decoration: none;
     display: inline-block;
 }
-a:link::after, a:visited::after {
+a:link:not(.as-button)::after, a:visited:not(.as-button)::after {
     content: "";
-    width: 0px;
+    width: 0;
     height: 1px;
     display: block;
     background: #f8f8ff;
@@ -85,9 +87,12 @@ a:link::after, a:visited::after {
     -webkit-transition: width 0.3s ease;
     transition: width 0.3s ease;
 }
-a:link:hover::after, a:visited:hover::after {
+a:link:not(.as-button):hover::after, a:visited:not(.as-button):hover::after {
     width: 100%;
     margin: 0 auto 0 0;
+}
+a.as-button {
+    text-decoration: none;
 }
 
 @keyframes Gradients {
